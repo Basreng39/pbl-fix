@@ -5,9 +5,30 @@
 @section('content')
     <div class="container position-relative">
 
+        @if (Session::get('edit'))
+            <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
+                <strong>{{ Session::get('edit') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if (Session::get('hapus'))
+            <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
+                <strong>{{ Session::get('hapus') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if (Session::get('tambah'))
+            <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
+                <strong>{{ Session::get('tambah') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
         <div class="col-md-12">
             <div class="mx-3 row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+
                 <div class="m-2 col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary"></strong>
                     <h3 class="mb-3 ">Data Kamar</h3>

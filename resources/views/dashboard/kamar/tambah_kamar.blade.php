@@ -5,13 +5,6 @@
       <div class ="row">
         <div class="my-4 mx-4">
 
-            @if (Session::get("success"))
-                <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
-                    <strong>{{ Session::get("success") }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
-
           <h4 class="text-center ">Tambah Data Kamar</h4>
 
             <form action="/admin/tambah" method="POST" enctype="multipart/form-data">

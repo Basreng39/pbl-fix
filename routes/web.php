@@ -21,6 +21,9 @@ use \App\Http\Controllers\KamarController;
 Route::get('/', [HomeController::class,"index"]);
 
 Route::get("/admin/kamar",[KamarController::class,"kamar"])->middleware("admin");
+Route::get("/admin/kamar/edit/{id}",[KamarController::class,"edit"])->middleware("admin");
+Route::post("/admin/kamar/edit/{id}",[KamarController::class,"update"])->middleware("admin");
+Route::get("/admin/kamar/delete/{id}",[KamarController::class,"destroy"])->middleware("admin");
 Route::get("/admin/tambah",[KamarController::class,"tambahKamar"])->middleware("admin");
 Route::post("/admin/tambah",[KamarController::class,"store"])->middleware("admin");
 
