@@ -33,8 +33,13 @@ Route::post("/logout",[AdminController::class,"logout"]);
 
 Route::get("/admin",[AdminController::class,"index"])->middleware("auth");
 
-Route::get("/admin/penyewa/aktif",[AdminController::class,"penyewaAktif"])->middleware("admin");
-Route::get("/admin/penyewa/tambah",[AdminController::class,"tambahPenyewa"])->middleware("admin");
+Route::get("/admin/penyewa/aktif",[PenyewaController::class,"penyewaAktif"])->middleware("admin");
+Route::get("/admin/penyewa",[PenyewaController::class,"penyewa"])->middleware("admin");
+Route::get("/admin/penyewa/tambah",[PenyewaController::class,"tambahPenyewa"])->middleware("admin");
+Route::post("/admin/penyewa/tambah",[PenyewaController::class,"store"])->middleware("admin");
+Route::get("/admin/penyewa/edit/{id}",[PenyewaController::class,"edit"])->middleware("admin");
+Route::post("/admin/penyewa/edit/{id}",[PenyewaController::class,"update"])->middleware("admin");
+Route::get("/admin/penyewa/delete/{id}",[PenyewaController::class,"destroy"])->middleware("admin");
 
 Route::get("/admin/laporan",[AdminController::class,"laporan"])->middleware("admin");
 Route::get("/admin/pembayaran",[AdminController::class,"pembayaran"])->middleware("admin");

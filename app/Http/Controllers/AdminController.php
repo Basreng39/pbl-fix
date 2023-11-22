@@ -57,15 +57,4 @@ class AdminController extends Controller
         ]);
     }
 
-    public function penyewaAktif(){
-        return view ("dashboard.penyewa.aktif",[
-            "judul" => "Penyewa Aktif"
-        ]);
-    }
-
-    public function tambahPenyewa(){
-        return view("dashboard.penyewa.tambah_penyewa",[
-            "judul" => "Tambah Data Penyewa",
-        ]);
-    }
 }
