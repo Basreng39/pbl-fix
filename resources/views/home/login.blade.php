@@ -28,13 +28,14 @@
 <div class="login-container">
     <h2 class="text-center text-black mb-4">Login</h2>
 
-    <form>
+    <form action="/login" method="POST">
+        @csrf
         <div class="mb-3 bg-light">
-            <input type="text" class="form-control" id="username" placeholder="Username / Email">
+            <input type="text" name="email" class="form-control" id="username" placeholder="Email">
         </div>
 
         <div class="mb-3 bg-light">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
         </div>
 
         <div class="mb-3">

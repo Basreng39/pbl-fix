@@ -19,15 +19,10 @@ use \App\Http\Controllers\KamarController;
 */
 
 Route::get('/', [HomeController::class,"index"]);
-Route::get("/login", [HomeController::class,"login"]);
 
-
-Route::get("/penyewa",[PenyewaController::class,"index"]);
-
-
-Route::get("/admin/kamar",[KamarController::class,"kamar"])->middleware("auth");
-Route::get("/admin/tambah",[KamarController::class,"tambahKamar"])->middleware("auth");
-Route::post("/admin/tambah",[KamarController::class,"store"])->middleware("auth");
+Route::get("/admin/kamar",[KamarController::class,"kamar"])->middleware("admin");
+Route::get("/admin/tambah",[KamarController::class,"tambahKamar"])->middleware("admin");
+Route::post("/admin/tambah",[KamarController::class,"store"])->middleware("admin");
 
 Route::get("/admin/login",[AdminController::class,"login"])->middleware("guest")->name("login");
 Route::post("/admin/login",[AdminController::class,"auth"]);
@@ -35,12 +30,14 @@ Route::post("/logout",[AdminController::class,"logout"]);
 
 Route::get("/admin",[AdminController::class,"index"])->middleware("auth");
 
-Route::get("/admin/penyewa/aktif",[AdminController::class,"penyewaAktif"])->middleware("auth");
-Route::get("/admin/penyewa/tambah",[AdminController::class,"tambahPenyewa"])->middleware("auth");
+Route::get("/admin/penyewa/aktif",[AdminController::class,"penyewaAktif"])->middleware("admin");
+Route::get("/admin/penyewa/tambah",[AdminController::class,"tambahPenyewa"])->middleware("admin");
 
-Route::get("/admin/laporan",[AdminController::class,"laporan"])->middleware("auth");
-Route::get("/admin/pembayaran",[AdminController::class,"pembayaran"])->middleware("auth");
+Route::get("/admin/laporan",[AdminController::class,"laporan"])->middleware("admin");
+Route::get("/admin/pembayaran",[AdminController::class,"pembayaran"])->middleware("admin");
 
-Route::get("/penyewa/",[PenyewaController::class,"index"]);
-Route::get("/penyewa/kos",[PenyewaController::class,"kosSaya"]);
-Route::get("/penyewa/riwayat",[PenyewaController::class,"riwayat"]);
+Route::get("/login", [HomeController::class,"login"])->middleware("guest");
+Route::post("/login", [HomeController::class,"auth"]);
+Route::get("/penyewa",[PenyewaController::class,"index"])->middleware("auth");
+Route::get("/penyewa/kos",[PenyewaController::class,"kosSaya"])->middleware("auth");
+Route::get("/penyewa/riwayat",[PenyewaController::class,"riwayat"])->middleware("auth");
