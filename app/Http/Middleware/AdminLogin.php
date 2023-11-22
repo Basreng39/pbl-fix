@@ -15,7 +15,7 @@ class AdminLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->user() !== "admin"){
+        if(auth()->user()->status !== "admin"){
             abort(403);
         }
         return $next($request);
