@@ -1,0 +1,83 @@
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    background-color: #04C351;
+    color: #fff;
+}
+
+.profile-link {
+    display: inline;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    margin-left: 550px;
+}
+
+.filters {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-dropdown {
+    width: 150px;
+}
+
+.filter-text {
+    margin-right: 10px;
+}
+
+.filter-input {
+    width: 120px;
+}
+
+.filter-btn {
+    background-color: #04C351;
+    color: #fff;
+}
+
+.penyewa-card {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 15rem;
+}
+
+.penyewa-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.penyewa-details {
+    flex: 1;
+}
+
+.penyewa-status {
+    color: #04C351;
+    font-weight: bold;
+}
