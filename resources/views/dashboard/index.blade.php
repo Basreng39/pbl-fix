@@ -13,16 +13,16 @@
                         <td>{{ auth()->user()->name }}</td>
                     </tr>
                     <tr>
+                        <td>Status</td>
+                        <td>{{ auth()->user()->status }}</td>
+                    </tr>
+                    <tr>
                         <td>Alamat</td>
                         <td>{{ auth()->user()->alamat }}</td>
                     </tr>
                     <tr>
                         <td>Nomor</td>
                         <td>{{ auth()->user()->no_hp }}</td>
-                    </tr>
-                    <tr>
-                        <td>Status</td>
-                        <td>{{ auth()->user()->status }}</td>
                     </tr>
                 </tbody>
             </table>

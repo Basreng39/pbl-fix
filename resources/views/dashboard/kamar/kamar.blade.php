@@ -55,7 +55,7 @@
                                         <i class="fa fa-3x fa-bed" aria-hidden="true"></i><br>
                                     </div>
                                     <div class="text-center tab-title text-danger">
-                                        {{ $k->nama_kamar }} {{ $k->id }}
+                                        {{ $k->nama_kamar }}{{--  {{ $k->id }} --}}
                                     </div>
                                 </div>
                             </a>
@@ -69,12 +69,12 @@
             <div class="row mt-4 {{ Request::is('#') ? 'show' : 'd-none' }}" id="DK{{ $k->id }}">
 
                 <div class="card">
-                    <div class="row d-flex ">
+                    <div class="row d-flex card-header">
                         <a href="/admin/kamar/edit/{{ $k->id }}" class="btn mx-2 col-md-1 btn-warning">Edit</a>
                         <a href="/admin/kamar/delete/{{ $k->id }}" class="btn col-md-1 btn-danger">Hapus</a>
                     </div>
-                    <h5 class="card-header">No {{ $k->id }} {{ $k->nama_kamar }}</h5>
                     <div class="card-body">
+                        <h5 class="card-text">No {{ $k->id }} {{ $k->nama_kamar }}</h5>
                         <h3 class="card-title text-bold"> Rp {{ number_format($k->harga) }}</h3>
                         <p class="card-text">Jenis : {{ $k->jenis }}</p>
                         <p class="card-text">Status: {{ $k->status }}</p>

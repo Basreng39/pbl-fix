@@ -79,7 +79,7 @@
                 <label for="" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-4 d-flex">
                     <div class="mr-2 align-self-center me-3">:</div>
-                    <input type="text" name="password" class="form-control" value="{{ $data->password }}">
+                    <input type="text" name="password" class="form-control"">
                 </div>
             </div>
             <div class="mb-3 row align-items-center">

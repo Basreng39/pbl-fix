@@ -67,18 +67,49 @@
             <div class="row mt-4 {{ Request::is('#') ? 'show' : 'd-none' }}" id="DK{{ $k->id }}">
 
                 <div class="card">
-                    <div class="row d-flex ">
+                    <div class="row d-flex card-header">
                         <a href="/admin/penyewa/edit/{{ $k->id }}" class="btn mx-2 col-md-1 btn-warning">Edit</a>
                         <a href="/admin/penyewa/delete/{{ $k->id }}" class="btn col-md-1 btn-danger">Hapus</a>
                     </div>
-                    <h5 class="card-header">Nama <b>{{ $k->name }}</b></h5>
                     <div class="card-body">
-                        <h3 class="card-title text-bold"> Status {{ $k->status }}</h3>
-                        <p class="card-text">Gender: {{ $k->jenis_kelamin }}</p>
-                        <p class="card-text">Alamat: {{ $k->alamat }}</p>
-                        <p class="card-text">Nomor hp: {{ $k->no_hp }}</p>
-                        <p class="card-text">Email: {{ $k->email }}</p>
-                        <p class="card-text">Foto :<img src="{{ asset('storage/' . $k->gambar) }}"></p>
+                        <table>
+                            <tr>
+                                <td><p class="card-title">Nama </p></td>
+                                <td><p class="card-title"><b>{{ $k->name }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">NIK </p></td>
+                                <td><p class="card-title"><b>{{ $k->nik }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Status </p></td>
+                                <td><p class="card-title"><b>{{ $k->status }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Gender </p></td>
+                                <td><p class="card-title"><b>{{ $k->jenis_kelamin }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Kampus </p></td>
+                                <td><p class="card-title"><b>{{ $k->kampus }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Alamat </p></td>
+                                <td><p class="card-title"><b>{{ $k->alamat }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Nomor HP </p></td>
+                                <td><p class="card-title"><b>{{ $k->no_hp }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Email </p></td>
+                                <td><p class="card-title"><b>{{ $k->email }}</b> </p></td>
+                            </tr>
+                            <tr>
+                                <td><p class="card-title">Foto </p></td>
+                                <td><img style="max-width: 100%; height: auto; display: inline" class="object-fit-cover border rounded" src="{{ asset('storage/' . $k->foto) }}"></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

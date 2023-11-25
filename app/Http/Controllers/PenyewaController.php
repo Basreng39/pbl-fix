@@ -11,8 +11,8 @@ class PenyewaController extends Controller
     public function penyewa(User $user){
         return view("dashboard.penyewa.penyewa",[
             "judul" => "Data Penyewa",
-            "total" => $user->where("status","user")->count(),
-            "user" => User::where("status","user")->paginate(12),
+            "total" => $user->whereNot("status","admin")->count(),
+            "user" => User::whereNot("status","admin")->paginate(12),
         ]);
     }
 

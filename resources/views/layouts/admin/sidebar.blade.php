@@ -16,7 +16,7 @@
             </li>
             <li class="treeview {{ $judul === 'Data Penyewa' ? 'active' : '' }}">
                 <a href="/admin/penyewa" class="text-decoration-none">
-                    <i class="fa fa-bed"></i>
+                    <i class="fa fa-user"></i>
                     <i></i> <span>Penyewa</span>
                 </a>
             </li>
