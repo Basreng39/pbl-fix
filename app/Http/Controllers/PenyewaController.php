@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 class PenyewaController extends Controller
 {
 
+    public function index(){
+        return view("penyewa.index",[
+            "title" => "Dashboard Penyewa"
+        ]);
+    }
+
     public function penyewa(User $user){
         return view("dashboard.penyewa.penyewa",[
             "judul" => "Data Penyewa",

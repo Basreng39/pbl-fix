@@ -1,3 +1,4 @@
+{{-- @dd($data) --}}
 @extends('layouts.guest.master')
 
 
@@ -38,11 +39,23 @@
         <button type="button" class="btn filter-btn">Set</button>
     </div>
 
-    <div class="card kamar-card">
-        <img src="path/to/foto.jpg" class="card-img-top" alt="Foto Kamar">
-        <div class="card-body kamar-details">
-        <div class="card-text mb-0 small">Tipe Kamar</div>
-        <div class="card-text mb-0 small">Fasilitas Kos</div>
-        <div class="card-text mb-0 small">Harga Kos</div>
+     <div class="container mt-3">
+        <div class="row">
+            @foreach ($data as $kamar)
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('storage/' . $kamar->gambar) }}">
+
+                        <div class="card-body">
+                            <div class="card-text mb-0 small">Tipe Kamar {{ $kamar->jenis }}</div>
+                            <div class="card-text mb-0 small">Fasilitas Kos {{ $kamar->keterangan }}</div>
+                            <div class="card-text mb-0 small">Harga Kos {{ $kamar->harga }}</div>
+                            <a href="#" class="mt-2 btn btn-primary">Hubungi Pemilik</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
+
 @endsection

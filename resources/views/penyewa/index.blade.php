@@ -15,12 +15,12 @@
                     </div>
                     <div class="mb-3">
                         <label for="InputNIK" class="form-label">NIK</label>
-                        <input class="form-control" id="disabledInput" type="text" value="{{ auth()->user() }}"
+                        <input class="form-control" id="disabledInput" type="text" value="{{ auth()->user()->nik }}"
                             disabled>
                     </div>
                     <div class="mb-3">
                         <label for="Inputtgllahir" class="form-label">Tanggal Lahir</label>
-                        <input class="form-control" id="disabledInput" type="text" value="{{ auth()->user() }}"
+                        <input class="form-control" id="disabledInput" type="text" value="{{ auth()->user()->tgl_lahir }}"
                             disabled>
                     </div>
                     <div class="mb-3">

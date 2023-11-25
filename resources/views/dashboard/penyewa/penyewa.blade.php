@@ -34,7 +34,7 @@
                             class="fa fa-plus" aria-hidden="true"></i> Penyewa</a>
                 </div>
             </div>
-            <h5 class="ms-auto">Total Penyewa aktif :{{ $total }}</h5>
+            <h5 class="ms-auto">Total Penyewa aktif : {{ $total }}</h5>
         </div>
 
 
@@ -50,10 +50,10 @@
 
                                 <div class=" align-items-center">
                                     <div class="tab-icon">
-                                        <i class="fa fa-3x fa-bed" aria-hidden="true"></i><br>
+                                        <i class="fa fa-3x fa-user" aria-hidden="true"></i><br>
                                     </div>
                                     <div class="text-center tab-title text-danger">
-                                        {{ $k->name }} {{ $k->id }}
+                                        {{ $k->name }}
                                     </div>
                                 </div>
                             </a>
