@@ -14,6 +14,18 @@ class PenyewaController extends Controller
         ]);
     }
 
+    public function kosSaya(){
+        return view("penyewa.kos",[
+            "title" => "Kos Saya"
+        ]);
+    }
+
+    public function riwayat(){
+        return view("penyewa.riwayat",[
+            "title" => "Riwayat Transaksi"
+        ]);
+    }
+
     public function penyewa(User $user){
         return view("dashboard.penyewa.penyewa",[
             "judul" => "Data Penyewa",
